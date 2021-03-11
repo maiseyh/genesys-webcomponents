@@ -8,7 +8,7 @@ exports[`gux-radial-progress #render should render component as expected (1) 1`]
 
 exports[`gux-radial-progress #render should render component as expected (2) 1`] = `
 <gux-radial-progress value="0">
-  <div aria-valuemax="100" aria-valuemin="0" aria-valuenow="0" role="progressbar">
+  <div aria-valuemax="100" aria-valuemin="0" aria-valuenow="0" class="gux-neutral" role="progressbar">
     <svg class="gux-svg-container" height="60px" viewBox="0 0 60 60" width="60px">
       <filter id="dropshadow-4">
         <feGaussianBlur in="SourceGraphic" stdDeviation="2"></feGaussianBlur>
@@ -30,7 +30,7 @@ exports[`gux-radial-progress #render should render component as expected (2) 1`]
 
 exports[`gux-radial-progress #render should render component as expected (3) 1`] = `
 <gux-radial-progress value="10">
-  <div aria-valuemax="100" aria-valuemin="0" aria-valuenow="10" role="progressbar">
+  <div aria-valuemax="100" aria-valuemin="0" aria-valuenow="10" class="gux-neutral" role="progressbar">
     <svg class="gux-svg-container" height="60px" viewBox="0 0 60 60" width="60px">
       <filter id="dropshadow-6">
         <feGaussianBlur in="SourceGraphic" stdDeviation="2"></feGaussianBlur>
@@ -52,7 +52,7 @@ exports[`gux-radial-progress #render should render component as expected (3) 1`]
 
 exports[`gux-radial-progress #render should render component as expected (4) 1`] = `
 <gux-radial-progress value="100">
-  <div aria-valuemax="100" aria-valuemin="0" aria-valuenow="100" role="progressbar">
+  <div aria-valuemax="100" aria-valuemin="0" aria-valuenow="100" class="gux-neutral" role="progressbar">
     <svg class="gux-svg-container" height="60px" viewBox="0 0 60 60" width="60px">
       <filter id="dropshadow-8">
         <feGaussianBlur in="SourceGraphic" stdDeviation="2"></feGaussianBlur>
@@ -86,7 +86,7 @@ exports[`gux-radial-progress #render should render component as expected (6) 1`]
 
 exports[`gux-radial-progress #render should render component as expected (7) 1`] = `
 <gux-radial-progress max="100" value="10">
-  <div aria-valuemax="100" aria-valuemin="0" aria-valuenow="10" role="progressbar">
+  <div aria-valuemax="100" aria-valuemin="0" aria-valuenow="10" class="gux-neutral" role="progressbar">
     <svg class="gux-svg-container" height="60px" viewBox="0 0 60 60" width="60px">
       <filter id="dropshadow-14">
         <feGaussianBlur in="SourceGraphic" stdDeviation="2"></feGaussianBlur>
@@ -108,7 +108,7 @@ exports[`gux-radial-progress #render should render component as expected (7) 1`]
 
 exports[`gux-radial-progress #render should render component as expected (8) 1`] = `
 <gux-radial-progress max="10" value="10">
-  <div aria-valuemax="10" aria-valuemin="0" aria-valuenow="10" role="progressbar">
+  <div aria-valuemax="10" aria-valuemin="0" aria-valuenow="10" class="gux-neutral" role="progressbar">
     <svg class="gux-svg-container" height="60px" viewBox="0 0 60 60" width="60px">
       <filter id="dropshadow-16">
         <feGaussianBlur in="SourceGraphic" stdDeviation="2"></feGaussianBlur>

@@ -2,6 +2,8 @@
 
 // Style
 gux-radial-progress {
+  color: @gux-black-50;
+
   > div {
     display: block;
 
@@ -28,48 +30,29 @@ gux-radial-progress {
         fill: @gux-black-50;
       }
     }
-  }
-}
 
-// Theming
+    &.gux-nutral {
+      .gux-dynamic-circle {
+        stroke: @gux-blue-60;
+      }
+    }
 
-// Dark
-.gux-radial-progress-dark-theme {
-  color: @gux-type-dark;
+    &.gux-positive {
+      .gux-dynamic-circle {
+        stroke: @gux-alert-green-60;
+      }
+    }
 
-  > div {
-    .gux-percentage {
-      fill: @gux-off-white;
+    &.gux-alert {
+      .gux-dynamic-circle {
+        stroke: @gux-alert-red-60;
+      }
+    }
+
+    &.gux-warning {
+      .gux-dynamic-circle {
+        stroke: @gux-alert-yellow-60;
+      }
     }
   }
-}
-
-.gux-dark-theme {
-  gux-radial-progress {
-    .gux-radial-progress-dark-theme();
-  }
-}
-
-gux-radial-progress.gux-dark-theme {
-  .gux-radial-progress-dark-theme();
-}
-
-// Light
-.gux-radial-progress-light-theme {
-  color: @gux-type;
-}
-
-.gux-light-theme {
-  gux-radial-progress {
-    .gux-radial-progress-light-theme();
-  }
-}
-
-gux-radial-progress.gux-light-theme {
-  .gux-radial-progress-light-theme();
-}
-
-// Default Theme
-gux-radial-progress {
-  .gux-radial-progress-light-theme();
 }
