@@ -1,4 +1,4 @@
-import { Component, Element, h, JSX, Prop, State } from '@stencil/core';
+import { Component, Element, h, JSX, Listen, Prop, State } from '@stencil/core';
 
 import { trackComponent } from '../../../usage-tracking';
 
@@ -29,6 +29,16 @@ export class GuxFormField {
   @State()
   private labelPosition: 'above' | 'beside' = 'above';
 
+  @State()
+  private valid: boolean = true;
+
+  @Listen('change')
+  onChange(event: InputEvent) {
+    const target = event.target as HTMLInputElement;
+
+    this.valid = target.checkValidity();
+  }
+
   componentWillLoad() {
     this.input = this.root.querySelector(
       'input[slot="input"], select[slot="input"], textarea[slot="input"]'
@@ -43,6 +53,8 @@ export class GuxFormField {
     }
 
     trackComponent(this.root, { variant });
+
+    this.valid = this.input.checkValidity();
   }
 
   componentWillRender() {
@@ -128,6 +140,10 @@ export class GuxFormField {
         </div>
         <div class="gux-error">
           <slot name="error" />
+        </div>
+
+        <div class="gux-error">
+          {!this.valid ? this.input.validationMessage : null}
         </div>
       </div>
     );

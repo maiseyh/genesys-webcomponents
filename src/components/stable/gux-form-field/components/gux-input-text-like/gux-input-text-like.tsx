@@ -1,4 +1,4 @@
-import { Component, Element, h, JSX, Prop, State } from '@stencil/core';
+import { Component, Element, h, JSX, Listen, Prop, State } from '@stencil/core';
 
 import { buildI18nForComponent, GetI18nValue } from '../../../../../i18n';
 import setInputValue from '../../../../../utils/dom/set-input-value';
@@ -29,6 +29,16 @@ export class GuxInputTextLike {
 
   @State()
   private disabled: boolean;
+
+  @State()
+  private valid: boolean = true;
+
+  @Listen('change')
+  onChange(event: InputEvent) {
+    const input = event.target as HTMLInputElement;
+
+    this.valid = input.checkValidity();
+  }
 
   private clearInput(): void {
     setInputValue(this.input, '', true);
@@ -78,6 +88,8 @@ export class GuxInputTextLike {
         this.disabled = disabled;
       }
     );
+
+    this.valid = this.input.checkValidity();
   }
 
   componentDidUnload(): void {
@@ -89,7 +101,8 @@ export class GuxInputTextLike {
       <div
         class={{
           'gux-input-container': true,
-          'gux-disabled': this.disabled
+          'gux-disabled': this.disabled,
+          'gux-invalid': !this.valid
         }}
       >
         <slot name="input" />

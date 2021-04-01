@@ -1,4 +1,26 @@
 <form onchange="notify(event)" oninput="notify(event)">
+  <h1>Error</h1>
+  <gux-form-field>
+    <input
+      slot="input"
+      name="email"
+      type="email"
+      placeholder="joe.bloggs@example.com"
+    />
+    <label slot="label">Email</label>
+  </gux-form-field>
+
+  <gux-form-field>
+    <input
+      slot="input"
+      name="email"
+      type="email"
+      placeholder="joe.bloggs@example.com"
+      value="invalid-email"
+    />
+    <label slot="label">Email</label>
+  </gux-form-field>
+
   <h1>Checkbox</h1>
 
   <div>

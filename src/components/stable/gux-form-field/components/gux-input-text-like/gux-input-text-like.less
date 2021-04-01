@@ -34,6 +34,10 @@ gux-input-text-like {
       opacity: 0.5;
     }
 
+    &.gux-invalid {
+      border-color: red;
+    }
+
     input,
     select {
       flex: 1 1 auto;
@@ -83,9 +87,13 @@ gux-input-text-like {
     }
 
     &:focus-within {
-      border: 1px solid @gux-blue-60;
+      border-color: @gux-blue-60;
       outline: none;
       box-shadow: 0 0 4px @gux-blue-80;
+
+      &.gux-invalid {
+        border-color: red;
+      }
     }
   }
 }
