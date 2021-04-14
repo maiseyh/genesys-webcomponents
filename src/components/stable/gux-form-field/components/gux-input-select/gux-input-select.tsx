@@ -32,7 +32,7 @@ export class GuxInputSelect {
     );
   }
 
-  componentDidUnload(): void {
+  disconnectedCallback(): void {
     this.disabledObserver.disconnect();
   }
 
