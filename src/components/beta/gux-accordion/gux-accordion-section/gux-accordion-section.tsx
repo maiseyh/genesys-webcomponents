@@ -1,4 +1,4 @@
-import { Component, Element, h, JSX, Method, Prop, State } from '@stencil/core';
+import { Component, Element, h, JSX, Method, Prop } from '@stencil/core';
 
 import { randomHTMLId } from '../../../../utils/dom/random-html-id';
 import { logError } from '../../../../utils/error/log-error';
@@ -19,18 +19,8 @@ export class GuxAccordionSection {
   @Prop()
   arrowPosition: GuxAccordionSectionArrowPosition = 'default';
 
-  @State()
-  private expanded: boolean = false;
-
-  @Method()
-  async open() {
-    this.expanded = true;
-  }
-
-  @Method()
-  async close() {
-    this.expanded = false;
-  }
+  @Prop()
+  expanded: boolean = false;
 
   @Method()
   async toggle() {

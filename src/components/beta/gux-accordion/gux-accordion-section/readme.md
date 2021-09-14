@@ -10,29 +10,10 @@
 | Property        | Attribute        | Description | Type                         | Default     |
 | --------------- | ---------------- | ----------- | ---------------------------- | ----------- |
 | `arrowPosition` | `arrow-position` |             | `"beside-text" \| "default"` | `'default'` |
+| `expanded`      | `expanded`       |             | `boolean`                    | `false`     |
 
 
 ## Methods
-
-### `close() => Promise<void>`
-
-
-
-#### Returns
-
-Type: `Promise<void>`
-
-
-
-### `open() => Promise<void>`
-
-
-
-#### Returns
-
-Type: `Promise<void>`
-
-
 
 ### `toggle() => Promise<void>`
 
